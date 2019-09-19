@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ -z "$WINEPREFIX" ]; then
+	echo Warning: WINEPREFIX is not set. Using default prefix: ~/.wine
+	export WINEPREFIX=$HOME/.wine
+fi
+
+winpath_system32=$WINEPREFIX/drive_c/windows/system32
+winpath_syswow64=$WINEPREFIX/drive_c/windows/syswow64
+
+dxvkpath=/usr/share/wine-proton-dxvk
+
+if [ -d "$winpath_syswow64" ]; then
+	echo "Using 64-bit wine prefix."
+	ln -sf $dxvkpath/x32/d3d9.dll $winpath_syswow64/d3d9-d9vk.dll
+	ln -sf $dxvkpath/x32/d3d10.dll $winpath_syswow64/d3d10-dxvk.dll
+	ln -sf $dxvkpath/x32/d3d10_1.dll $winpath_syswow64/d3d10_1-dxvk.dll
+	ln -sf $dxvkpath/x32/d3d10core.dll $winpath_syswow64/d3d10core-dxvk.dll
+	ln -sf $dxvkpath/x32/d3d11.dll $winpath_syswow64/d3d11-dxvk.dll
+	ln -sf $dxvkpath/x32/dxgi.dll $winpath_syswow64/dxgi-dxvk.dll
+	ln -sf $dxvkpath/x64/d3d9.dll $winpath_system32/d3d9-d9vk.dll
+	ln -sf $dxvkpath/x64/d3d10.dll $winpath_system32/d3d10-dxvk.dll
+	ln -sf $dxvkpath/x64/d3d10_1.dll $winpath_system32/d3d10_1-dxvk.dll
+	ln -sf $dxvkpath/x64/d3d10core.dll $winpath_system32/d3d10core-dxvk.dll
+	ln -sf $dxvkpath/x64/d3d11.dll $winpath_system32/d3d11-dxvk.dll
+	ln -sf $dxvkpath/x64/dxgi.dll $winpath_system32/dxgi-dxvk.dll
+else
+	echo "Using 32-bit wine prefix."
+	ln -sf $dxvkpath/x32/d3d9.dll $winpath_system32/d3d9-d9vk.dll
+	ln -sf $dxvkpath/x32/d3d10.dll $winpath_system32/d3d10-dxvk.dll
+	ln -sf $dxvkpath/x32/d3d10_1.dll $winpath_system32/d3d10_1-dxvk.dll
+	ln -sf $dxvkpath/x32/d3d10core.dll $winpath_system32/d3d10core-dxvk.dll
+	ln -sf $dxvkpath/x32/d3d11.dll $winpath_system32/d3d11-dxvk.dll
+	ln -sf $dxvkpath/x32/dxgi.dll $winpath_system32/dxgi-dxvk.dll
+fi
