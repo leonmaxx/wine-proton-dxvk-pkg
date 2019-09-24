@@ -1,3 +1,5 @@
+#Maintainer: Leonid Maksymchuk <leonmaxx@gmail.com>
+
 pkgname=wine-proton-dxvk
 pkgver=1.4
 pkgrel=1
