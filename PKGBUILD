@@ -1,7 +1,5 @@
-#Maintainer: Leonid Maksymchuk <leonmaxx@gmail.com>
-
 pkgname=wine-proton-dxvk
-pkgver=1.4
+pkgver=1.4.1
 pkgrel=1
 pkgdesc='Vulkan-based D3D11, D3D10 and D3D9 implementation for Linux/Wine'
 url='https://github.com/doitsujin/dxvk'
@@ -9,14 +7,14 @@ arch=('x86_64')
 license=('BSD')
 
 depends=('wine-proton')
-d9vkver=0.20
+d9vkver=0.21
 
 source=("https://github.com/doitsujin/dxvk/releases/download/v$pkgver/dxvk-$pkgver.tar.gz"
-        "https://github.com/Joshua-Ashton/d9vk/releases/download/0.20/d9vk-$d9vkver.tar.gz"
+        "https://github.com/Joshua-Ashton/d9vk/releases/download/$d9vkver/d9vk-$d9vkver.tar.gz"
         "wine-update-prefix")
 
-sha256sums=('bf22785de1ce728bbdcfb4615035924112b4718049ca2cade5861b03735181de'
-            'bd53c17eafeffcf2251d3911b7814b92c8f7e4c6b7364217da38645093a1db35'
+sha256sums=('574ec4dc5201e45d70472228f0c6695426f0392503ec7a47d6092600aac53a07'
+            'e58d11733b6471718b4652e5be66bfd1a4d908d0ddf96be0ecb9efb2fb748055'
             '573d21cb287f526c8292aa2326e15316a9725864c4b84869052f6fca4c995775')
 
 package() {
