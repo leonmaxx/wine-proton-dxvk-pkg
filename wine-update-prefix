@@ -18,12 +18,14 @@ if [ -d "$winpath_syswow64" ]; then
 	ln -sf $dxvkpath/x32/d3d10core.dll $winpath_syswow64/d3d10core-dxvk.dll
 	ln -sf $dxvkpath/x32/d3d11.dll $winpath_syswow64/d3d11-dxvk.dll
 	ln -sf $dxvkpath/x32/dxgi.dll $winpath_syswow64/dxgi-dxvk.dll
+	ln -sf $dxvkpath/x32/dxvk_config.dll $winpath_syswow64/dxvk_config.dll
 	ln -sf $dxvkpath/x64/d3d9.dll $winpath_system32/d3d9-d9vk.dll
 	ln -sf $dxvkpath/x64/d3d10.dll $winpath_system32/d3d10-dxvk.dll
 	ln -sf $dxvkpath/x64/d3d10_1.dll $winpath_system32/d3d10_1-dxvk.dll
 	ln -sf $dxvkpath/x64/d3d10core.dll $winpath_system32/d3d10core-dxvk.dll
 	ln -sf $dxvkpath/x64/d3d11.dll $winpath_system32/d3d11-dxvk.dll
 	ln -sf $dxvkpath/x64/dxgi.dll $winpath_system32/dxgi-dxvk.dll
+	ln -sf $dxvkpath/x64/dxvk_config.dll $winpath_system32/dxvk_config.dll
 else
 	echo "Using 32-bit wine prefix."
 	ln -sf $dxvkpath/x32/d3d9.dll $winpath_system32/d3d9-d9vk.dll
@@ -32,4 +34,5 @@ else
 	ln -sf $dxvkpath/x32/d3d10core.dll $winpath_system32/d3d10core-dxvk.dll
 	ln -sf $dxvkpath/x32/d3d11.dll $winpath_system32/d3d11-dxvk.dll
 	ln -sf $dxvkpath/x32/dxgi.dll $winpath_system32/dxgi-dxvk.dll
+	ln -sf $dxvkpath/x32/dxvk_config.dll $winpath_system32/dxvk_config.dll
 fi
