@@ -1,5 +1,5 @@
 pkgname=wine-proton-dxvk
-pkgver=1.5.3
+pkgver=1.5.5
 pkgrel=1
 pkgdesc='Vulkan-based D3D11, D3D10 and D3D9 implementation for Linux/Wine'
 url='https://github.com/doitsujin/dxvk'
@@ -13,7 +13,7 @@ source=("https://github.com/doitsujin/dxvk/releases/download/v$pkgver/dxvk-$pkgv
         "dxvk_config.tar.gz"
         "wine-update-prefix")
 
-sha256sums=('b845c9c492e32648dee44d058c189eff8534e5490a80a3b2a921248bc72e33bd'
+sha256sums=('f4c57274ac85d71b192e2a0ac095f285e26cc054c87c6c34c081f919147539eb'
             'a3c0f15730f349871511379e8111d279dcda9b1d2bc6f3ba538f889c323d381f'
             '4b05e27bb70ea796f4988c5f74b7787c437b388079e62a025c0fd79a7859cf8d')
 
